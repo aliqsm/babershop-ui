@@ -1,0 +1,25 @@
+.app {
+    margin-bottom: 0;
+}
+
+
+
+/* Edit-Form Begin */
+.form-control {
+    border: 1px solid var(--color-border) !important;
+    box-shadow: none !important;
+    padding: 0.7rem 1rem;
+    font-size: 0.95rem;
+}
+
+.form-control:focus {
+    border-color: var(--color-primary) !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.form-control::placeholder {
+    font-size: 0.775rem;
+}
+
+/* Edit-Form End */

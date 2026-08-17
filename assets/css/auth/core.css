@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'myFont';
+  src: url('../../font/myFont.woff');
+}
+
+* {
+  font-family: 'myFont';
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  	/* جلوگیری از زوم توی آیفون */
+	touch-action: manipulation;
+}
+
+:root {
+  --bg: #f3f6fb;
+  --card: #ffffff;
+  --accent: #0D0C22;
+  --muted: #6b7280;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 480px;
+  height: 100dvh;
+}
+
+form {
+  max-width: 380px;
+  flex: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

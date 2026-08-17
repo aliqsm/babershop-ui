@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'myFont';
+  src: url('../../font/myFont.woff');
+}
+
+* {
+  font-family: 'myFont';
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f3f6fb;
+  --card: #ffffff;
+  --accent: #2563eb;
+  --muted: #6b7280;
+}
+
+
+.app {
+  width: 100%;
+  max-width: 480px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

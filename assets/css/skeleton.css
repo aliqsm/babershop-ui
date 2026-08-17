@@ -1,0 +1,33 @@
+:root {
+  --bg: #f7f7f8;
+  --skeleton-1: #e6e6e6;
+  --skeleton-2: #f4f4f4;
+  --card-bg: #fff;
+}
+
+
+.main-container {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.skel-line,
+.skel-card-img {
+  background: linear-gradient(100deg, var(--skeleton-1) 40%, var(--skeleton-2) 50%, var(--skeleton-1) 60%);
+  background-size: 200% 100%;
+  animation: sk-shimmer 2.6s linear infinite;
+  display: block;
+}
+
+
+@keyframes sk-shimmer {
+  0% {
+    background-position: -200% 0
+  }
+
+  100% {
+    background-position: 200% 0
+  }
+}
+
+

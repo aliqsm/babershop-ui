@@ -1,0 +1,17 @@
+
+.send-otp-code {
+  background-color: var(--accent) !important;
+  color: #fff !important;
+  padding: 12px !important;
+}
+
+input {
+  padding: 12px 14px;
+  line-height: 1.5rem;
+  outline: none;
+  letter-spacing: 0.1rem;
+}
+
+input:focus {
+  border-color: var(--accent) !important;
+}

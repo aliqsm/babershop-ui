@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+   <title>ورود به حساب</title>
+   <link href="../assets/libraries/bootstrap.rtl.min.css" rel="stylesheet" />
+   <link href="../assets/css/auth/core.css" rel="stylesheet" />
+   <link href="../assets/css/auth/login.css" rel="stylesheet" />
+</head>
+
+<body>
+   <div class="main-container">
+      <form action="" method="post" class="mx-auto w-100 px-3">
+         <img src="../assets/images/auth/logo.png" alt="" class="d-block m-auto">
+         <h3 class="fw-bold mt-5 fs-5">به پنل کاربری خوش آمدید.</h3>
+         <p class="text-secondary small my-4">برای ورود / ثبت نام شماره موبایل خود را وارد کنید</p>
+
+         <label for="phone" class="form-label mb-3 small text-secondary">شماره موبایل</label>
+         <input type="tel" id="phone" name="phone_number" class="d-block w-100 text-center rounded rounded-4 border border-secondary-subtle" maxlength="13" inputmode="numeric"
+            pattern="[0-9]*" autofocus>
+         <a href="confirm-phone.html" class="send-otp-code btn w-100 fw-bold rounded rounded-4 mt-3">ارسال کد</a>
+         <p class="text-secondary text-center mt-4" style="font-size: 0.8rem;line-height: 1.5rem;">با ورود یا ثبت‌نام در این وبسایت، شما به طور خودکار تمام <a href="#">قوانین و
+               مقررات</a>
+            استفاده از سایت را قبول می‌کنید.</p>
+      </form>
+   </div>
+
+   <script>
+      const phoneInput = document.getElementById('phone');
+
+      phoneInput.addEventListener('input', () => {
+         let val = phoneInput.value.replace(/\D/g, ''); // فقط اعداد
+         if (val.length > 4 && val.length <= 7) {
+            val = val.slice(0, 4) + ' ' + val.slice(4);
+         } else if (val.length > 7) {
+            val = val.slice(0, 4) + ' ' + val.slice(4, 7) + ' ' + val.slice(7, 11);
+         }
+         phoneInput.value = val;
+      });
+   </script>
+</body>
+
+</html>

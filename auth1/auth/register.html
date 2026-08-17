@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ثبت‌نام</title>
+    <link rel="stylesheet" href="../assets/libraries/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="../assets/css/auth/core.css">
+    <link rel="stylesheet" href="../assets/css/auth/register.css">
+</head>
+
+<body style="background-color: #F0F0F0;">
+    <main class="app p-3">
+        <div>
+            <h1 class="fw-bold fs-4">ثبت‌نام</h1>
+            <p class="text-secondary small mt-3">لطفاً فرم ثبت‌نام را تکمیل کنید.</p>
+        </div>
+
+        <form id="signupForm" action="#" method="post" novalidate class="d-flex flex-column gap-3 mt-4">
+            <div class="d-flex flex-column">
+                <label for="fullname" class="form-label text-secondary small">نام کامل</label>
+                <input id="fullname" name="fullname" type="text" placeholder="نام و نام خانوادگی" required autocomplete="name">
+            </div>
+            <div class="d-flex flex-column">
+                <label for="email" class="form-label text-secondary small">ایمیل</label>
+                <input id="email" name="email" type="email" placeholder="example@domain.com" required autocomplete="email">
+            </div>
+            <div class="d-flex flex-column pw-wrap">
+                <label for="password" class="form-label text-secondary small">رمز عبور</label>
+                <input id="password" name="password" type="password" style="padding-left: 50px" placeholder="رمز عبور" required autocomplete="new-password">
+                <button type="button" class="pw-toggle" id="togglePw">نمایش</button>
+            </div>
+            <div class="d-flex flex-column pw-wrap">
+                <label for="confirmPassword" class="form-label text-secondary small">تکرار رمز عبور</label>
+                <input id="confirmPassword" name="confirmPassword" type="password" style="padding-left: 50px" placeholder="تکرار رمز عبور" required autocomplete="new-password">
+                <button type="button" class="pw-toggle" id="toggleConfirmPw">نمایش</button>
+            </div>
+
+            
+            <div class="d-flex align-items-center justify-content-between" style="margin-top:6px">
+                <span class="text-secondary small">با ثبت‌نام موافقت‌نامه را می‌پذیرید.</span>
+                <a href="#" class="text-secondary small">قوانین</a>
+            </div>
+
+            <div class="d-flex flex-column gap-2 mt-2">
+                <button type="submit" class="btn btn-primary" style="padding:12px 0px">ثبت‌نام</button>
+                <a href="login.html" class="btn btn-outline-primary rounded rounded-3" style="padding:12px 0px" type="submit">ورود</a>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        const togglePw = (inputId, btnId) => {
+            const input = document.getElementById(inputId);
+            const btn = document.getElementById(btnId);
+            btn.addEventListener('click', () => {
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    btn.textContent = 'مخفی';
+                } else {
+                    input.type = 'password';
+                    btn.textContent = 'نمایش';
+                }
+            });
+        };
+        togglePw('password', 'togglePw');
+        togglePw('confirmPassword', 'toggleConfirmPw');
+    </script>
+</body>
+
+</html>

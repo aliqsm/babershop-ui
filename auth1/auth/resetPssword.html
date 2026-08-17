@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ریست کردن رمز عبور</title>
+      <link rel="stylesheet" href="../assets/libraries/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="../assets/css/auth/core.css">
+    <link rel="stylesheet" href="../assets/css/auth/reset_password.css">
+</head>
+
+<body style="background-color: #F0F0F0;">
+    <main class="app p-3">
+        <div>
+            <h1 class="fw-bold fs-4">ریست کردن رمز عبور</h1>
+            <p class="text-secondary small mt-3">لطفاً رمز عبور جدید خود را وارد کرده و تأیید کنید.</p>
+        </div>
+
+        <form action="#" method="post" novalidate class="d-flex flex-column gap-3 mt-4">
+            <div class="d-flex flex-column">
+                <label for="password" class="form-label text-secondary small">رمز عبور جدید</label>
+                <input id="password" name="password" type="password" placeholder="رمز عبور جدید" required autocomplete="new-password">
+            </div>
+            <div class="d-flex flex-column">
+                <label for="confirm_password" class="form-label text-secondary small">تکرار رمز عبور</label>
+                <input id="confirm_password" name="confirm_password" type="password" placeholder="تکرار رمز عبور" required autocomplete="new-password">
+            </div>
+                         <div class="d-flex flex-column gap-2 mt-2">
+                <button type="submit" class="btn btn-primary rounded rounded-3" style="padding:12px 0px;">ذخیره رمز عبور جدید</button>
+                <a href="login.html"  class="btn btn-outline-primary" style="padding:12px 0px">بازگشت به ورود</a>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

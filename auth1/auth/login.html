@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ورود</title>
+    <link rel="stylesheet" href="../assets/libraries/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="../assets/css/auth/core.css">
+    <link rel="stylesheet" href="../assets/css/auth/login.css">
+</head>
+
+<body style="background-color: #F0F0F0;">
+    <main class="app p-3">
+        <div>
+            <h1 class="fw-bold fs-4">ورود به حساب کاربری</h1>
+            <p class="text-secondary small mt-3">لطفاً با ایمیل و رمز عبور وارد شوید.</p>
+        </div>
+
+        <form id="loginForm" action="#" method="post" novalidate class="d-flex flex-column gap-3 mt-4">
+            <div class="d-flex flex-column">
+                <label for="email" class="form-label text-secondary small">ایمیل</label>
+                <input id="email" name="email" type="email" placeholder="example@domain.com" required autocomplete="email">
+            </div>
+            <div class="d-flex flex-column pw-wrap">
+                <label for="password" class="form-label text-secondary small">رمز عبور</label>
+                <input id="password" name="password" type="password" style="padding-left: 50px" placeholder="رمز عبور" required autocomplete="current-password">
+                <button type="button" class="pw-toggle" id="togglePw">نمایش</button>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+                <label class="d-flex align-items-center gap-2 text-secondary small"><input type="checkbox" name="remember" id="remember" style="width: 18px;height: 18px"> مرا به‌خاطر بسپار</label>
+                <a href="forgot.html" class="text-secondary small">فراموشی رمز؟</a>
+            </div>
+            <div class="d-flex flex-column gap-2 mt-2">
+                <!-- <button type="submit" class="btn btn-primary rounded rounded-3" style="padding:12px 0px;">ورود</button> -->
+                <a href="../home.html" class="btn btn-primary rounded rounded-3" style="padding:12px 0px;">ورود</a>
+                <a href="register.html" class="btn btn-outline-primary" style="padding:12px 0px">ثبت‌نام</a>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        const pw = document.getElementById('password');
+        const togglePwBtn = document.getElementById('togglePw');
+        togglePwBtn.addEventListener('click', () => {
+            if (pw.type === 'password') { pw.type = 'text'; togglePwBtn.textContent = 'مخفی' } else { pw.type = 'password'; togglePwBtn.textContent = 'نمایش' }
+        });
+    </script>
+</body>
+
+</html>

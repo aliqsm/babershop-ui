@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ورود با کد تأیید</title>
+    <link rel="stylesheet" href="../assets/libraries/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="../assets/css/auth/core.css">
+    <link rel="stylesheet" href="../assets/css/auth/two-factor-challenge.css">
+</head>
+
+<body style="background-color: #F0F0F0;">
+    <main class="app p-3">
+        <div>
+            <h1 class="fw-bold fs-4">کد تأیید</h1>
+            <p class="text-secondary small mt-3">کدی که برای شما ارسال شده را وارد کنید.</p>
+        </div>
+
+        <form action="" method="POST" novalidate class="d-flex flex-column gap-3 mt-4">
+           <div class="d-flex flex-column">
+                <label for="code"  class="form-label text-secondary small">کد تأیید</label>
+                <input type="text" id="code" name="code" maxlength="6" placeholder="کد تایید" required autofocus autocomplete="off">
+            </div>
+                       <div class="d-flex flex-column gap-2 mt-2">
+                <button type="submit" class="btn btn-primary rounded rounded-3" style="padding:12px 0px;">ورود</button>
+                <a href="#" class="btn btn-outline-primary" style="padding:12px 0px">ارسال مجدد کد</a>
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

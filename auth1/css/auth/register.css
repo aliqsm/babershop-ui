@@ -1,0 +1,28 @@
+input {
+  padding: 12px 14px;
+  border: 1px solid #e6e9ef;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none
+}
+
+input:focus {
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.06);
+  border-color: var(--accent)
+}
+
+.pw-wrap {
+  position: relative
+}
+
+.pw-toggle {
+  position: absolute;
+  left: 10px;
+  top: 67%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 13px;
+  color: var(--accent)
+}
